@@ -1,0 +1,27 @@
+const btn = document.querySelector("#btn");
+const lista = document.querySelector("#lista");
+
+
+btn.addEventListener("click",(event)=>{
+
+    adicionarItem()
+
+event.preventDefault()
+})
+
+function adicionarItem(){
+
+    const li = document.createElement("li");
+    const text = document.querySelector("#input-text").value;
+    li.textContent= (text);
+    lista.appendChild(li);
+    li.classList.add("stylo-li");
+
+
+    const button = document.createElement("button");
+    lista.appendChild(button).innerText="cancelar";
+    button.classList.add("stylo-button");
+
+    
+}
+
